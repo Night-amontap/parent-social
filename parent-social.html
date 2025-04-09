@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PARENT Links</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f9f9f9;
+            font-family: 'Kanit', sans-serif;
+            text-align: center;
+            padding-top: 40px;
+            color: #333;
+        }
+
+        .profile-pic {
+            width: auto;
+            height: 120px;
+            object-fit: cover;
+            margin-bottom: 16px;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 16px;
+        }
+
+        .link-card {
+            display: block;
+            text-decoration: none;
+            color: white;
+            background-color: #1877f2;
+            margin: 10px auto;
+            padding: 12px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .link-card:hover {
+            transform: scale(1.05);
+        }
+
+        .link-line {
+            background-color: #06C755;
+        }
+
+        .link-facebook {
+            background-color: #1877f2;
+        }
+
+        .link-tiktok {
+            background-color: #000000;
+        }
+
+        .preview-container {
+            position: relative;
+            margin: 20px auto;
+            width: 100%;
+            max-width: 360px;
+            height: auto;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 10px;
+            background-color: #fff;
+        }
+
+        .switch-lang-btn {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            padding: 5px 10px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            background-color: #555;
+            color: white;
+            border-radius: 8px;
+            border: none;
+        }
+
+        .q-red {
+            color: red;
+        }
+
+        .a-green {
+            color: green;
+        }
+
+        .footer {
+            margin-top: 30px;
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+
+        .logo-p {
+            width: auto;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img class="profile-pic" src="scr/logo-parent.png" alt="PARENT logo">
+        <h1>PARENT เป็นหนึ่งในผู้นำการให้บริการจัดที่พัก</h1>
+        <p>✨ ทุกช่องทางติดต่อของเรา ✨</p>
+        
+        <a class="link-card link-line" href="https://line.me/R/ti/p/@931wdfcb" target="_blank">Line OA : @parentroom</a>
+        <div class="preview-container">
+            <p><strong>Q&A</strong></p>
+            <p class="q-red"><strong>Q:</strong> ทำไมต้องเลือก PARENT?</p>
+            <p class="a-green" id="answer"><strong>A:</strong> เพราะน้อง ๆ และผู้ปกครอง ไม่ต้องเดินหาหอพักเอง ได้ห้องที่โดนใจ ราคาดี ไม่เสียเวลา ไว้ใจ PARENT "หอพักดีดี พี่หาให้เอง"</p>
+            <button class="switch-lang-btn" onclick="switchLanguage()">EN/TH</button>
+        </div>
+
+        <a class="link-card link-tiktok" href="https://www.tiktok.com/@parent.room" target="_blank">TikTok : parent.room</a>
+        <div class="preview-container">
+            <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@parent.room/video/7489764559322877192" data-video-id="7489764559322877192" style="max-width: 360px;min-width: 325px;" >
+                <section>
+                    <a target="_blank" href="https://www.tiktok.com/@parent.room?refer=embed">@parent.room</a>
+                    หาหออยู่ใช่มั้ย? หอถูก ใกล้เซ็นทรัลแจ้งวัฒนะ เดินไป PIM สบายๆ ห้องน่าอยู่ ราคาเป็นมิตรสุดๆ🥰
+                </section>
+            </blockquote>
+        </div>
+
+        <a class="link-card link-facebook" href="https://www.facebook.com/profile.php?id=61556664716206" target="_blank">Facebook : PARENT</a>
+        <div class="preview-container">
+            <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid0EZdt8imKdQXenkjFhsYfienSRv8det8RfqXwhTnC6XiRiedFBZhvW6WvPdnHsmdGl%26id%3D61556664716206&show_text=true&width=360" width="360" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+        </div>
+
+        <div class="footer">
+            <img class="logo-p" src="scr/logo.png" alt="PARENT-LOGO">
+            © 2024 PARENT Web. All rights reserved.
+        </div>
+    </div>
+
+    <script>
+        function switchLanguage() {
+            const answer = document.getElementById('answer');
+            if (answer.innerText.includes("เพราะน้อง ๆ")) {
+                answer.innerHTML = '<strong>A:</strong> Because you don\'t need to find accommodation yourself; we offer desirable rooms at great prices, saving your time. Trust PARENT - "Great rooms, found for you!"';
+            } else {
+                answer.innerHTML = '<strong>A:</strong> เพราะน้อง ๆ และผู้ปกครอง ไม่ต้องเดินหาหอพักเอง ได้ห้องที่โดนใจ ราคาดี ไม่เสียเวลา ไว้ใจ PARENT "หอพักดีดี พี่หาให้เอง"';
+            }
+        }
+    </script>
+    <script async src="https://www.tiktok.com/embed.js"></script>
+</body>
+</html>
